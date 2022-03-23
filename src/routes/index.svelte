@@ -17,7 +17,13 @@
   export let articles;
 </script>
 
-<div class="grid grid-cols-4 gap-2">
+<svelte:head>
+  <title>
+    Basketball Training and Teams | Cagers Basketball | Vancouver, WA
+  </title>
+</svelte:head>
+
+<div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
   {#each articles as article}
     <div id="card" class="bg-white rounded p-1 relative h-48">
       <h3 class="font-semibold">{article.title}</h3>

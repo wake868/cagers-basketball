@@ -4,7 +4,7 @@
 
 <header class="flex justify-center items-center h-16 bg-white">
   <img class="scale-50" src="/cagers-logo-sm.png" alt="cagers logo" />
-  <span class="text-3xl">CAGERS BASKETBALL</span>
+  <span class="sm:text-lg md:text-3xl">CAGERS BASKETBALL</span>
   <img class="scale-50" src="/cagers-logo-sm.png" alt="cagers logo" />
 </header>
 

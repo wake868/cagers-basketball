@@ -17,6 +17,12 @@
   export let article;
 </script>
 
+<svelte:head>
+  <title>
+    Cagers Basketball | {article.title}
+  </title>
+</svelte:head>
+
 <a
   sveltekit:prefetch
   class="py-2 px-4 bg-red-800 rounded text-white hover:opacity-70"
@@ -31,9 +37,9 @@
   <div class="text-stone-600">
     {@html article.body.html}
   </div>
-  <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-1">
+  <div class="grid  sm:grid-cols-2 md:grid-cols-5 gap-1">
     {#each article.photos as photo}
-      <a href={photo.url} target="_blank">
+      <a href="/photos/{photo.handle}" target="_blank">
         <img
           src="https://media.graphcms.com/resize=fit:clip,width:250/output=format:webp/{photo.handle}"
           alt="basketball"
