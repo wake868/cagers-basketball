@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* base styles */
+body {
+  background: url("/static/banner-court-gs.jpg");
+  /* font-family: "Jockey One", sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #3a3a3a;
+}
+
+/* p {
+  margin-bottom: 20px;
+} */
+#card {
+  /* background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(/static/cagers-logo-sm.png);
+  background-repeat: no-repeat; */
+  /* url("https://media.graphcms.com/resize=fit:clip,width:250/output=format:webp/U9MEqtDjQAijUPrBfMep"); */
+}
+
+@layer components {
+  ul {
+    @apply list-disc ml-6;
+  }
+  p {
+    @apply mb-5;
+  }
+  blockquote {
+    @apply bg-gray-50 border-l-8 border-l-slate-500 my-6 mx-2 p-2;
+  }
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}

@@ -16,3 +16,25 @@ export async function getArticles() {
   const { articles } = await graphcms.request(query);
   return articles;
 }
+
+export async function getArticleBySlug(slug) {
+  const query = gql`
+  query MyQuery {
+    article(where: { slug: "${slug}" }) {
+      id
+      title
+      slug
+      body {
+        html
+      }
+      photos {
+        url
+        handle
+      }
+    }
+  }
+  `;
+
+  const { article } = await graphcms.request(query);
+  return article;
+}

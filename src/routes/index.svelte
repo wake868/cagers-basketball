@@ -17,6 +17,19 @@
   export let articles;
 </script>
 
-{#each articles as article}
-  <h1 class="text-3xl font-bold underline">{article.title}</h1>
-{/each}
+<div class="grid grid-cols-4 gap-2">
+  {#each articles as article}
+    <div id="card" class="bg-white rounded p-1 relative h-48">
+      <h3 class="font-semibold">{article.title}</h3>
+      <hr />
+      <p class="text-stone-500 text-xs">{article.blurb}</p>
+      <a
+        sveltekit:prefetch
+        class="py-1 px-2 bg-red-800 rounded text-white absolute bottom-1 right-1 hover:opacity-70"
+        href="/{article.slug}"
+      >
+        VIEW
+      </a>
+    </div>
+  {/each}
+</div>
