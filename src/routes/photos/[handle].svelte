@@ -19,7 +19,7 @@
 <a
   sveltekit:prefetch
   class="py-2 px-4 bg-red-800 rounded text-white hover:opacity-70"
-  href="/"
+  href="/photos"
 >
   BACK
 </a>
